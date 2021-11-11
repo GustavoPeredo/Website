@@ -4,5 +4,6 @@
       nodejs
       pandoc
       parallel
+      gnused
     ];
 }

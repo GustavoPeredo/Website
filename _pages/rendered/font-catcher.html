@@ -5,24 +5,20 @@
 <p>Font Catcher relies on <code>curl</code> to download fonts, make sure to install it before using Font Catcher.</p>
 <h3 id="recommended">Recommended</h3>
 <p>Download one of the following:</p>
-<figure>
-<embed src="https://github.com/GustavoPeredo/Font-Catcher/releases/download/v1.0.1/font-catcher.zip" /><figcaption aria-hidden="true">Standard repo</figcaption>
-</figure>
-<figure>
-<embed src="https://github.com/GustavoPeredo/Font-Catcher/releases/download/v1.0.1/font-catcher.g.zip" /><figcaption aria-hidden="true">Standard repo + Google Fonts (Recommended)</figcaption>
-</figure>
+<p><a href="https://github.com/GustavoPeredo/Font-Catcher/releases/download/v1.0.1/font-catcher.zip">Standard repo</a></p>
+<p><a href="https://github.com/GustavoPeredo/Font-Catcher/releases/download/v1.0.1/font-catcher.g.zip">Standard repo + Google Fonts (Recommended)</a></p>
 <p>Extract and copy to <code>/usr/bin</code>! That’s it!</p>
 <h3 id="using-cargo">Using Cargo</h3>
 <p>To install using the standard repo, run:</p>
 <pre><code>cargo install font-catcher</code></pre>
 <p>To install with Google Fonts:</p>
 <ol type="1">
-<li><p>Grab an API Key on <img src="https://developers.google.com/fonts/docs/developer_api" alt="Google Font’s Website" /></p></li>
+<li><p>Grab an API Key on <a href="https://developers.google.com/fonts/docs/developer_api">Google Font’s Website</a></p></li>
 <li><p>Run:</p></li>
 </ol>
 <pre><code>GOOGLE_FONTS_KEY=&quot;YOUR API KEY HERE&quot; cargo install font-catcher --features google_repo</code></pre>
 <h1 id="usage">Usage</h1>
-<p>Font Catcher’s commands are aimed at being easy and intuitive to use. If you have used <code>apt</code> or <code>dnf</code> as package managers once, you will notice the similarities. By default, Font Catcher comes with one repository which is currently WIP: <img src="https://github.com/GustavoPeredo/open-font-repository" alt="Open Font Repository" />, but it is possible to use Google Fonts as a repository as well (and other repositories).</p>
+<p>Font Catcher’s commands are aimed at being easy and intuitive to use. If you have used <code>apt</code> or <code>dnf</code> as package managers once, you will notice the similarities. By default, Font Catcher comes with one repository which is currently WIP: <a href="https://github.com/GustavoPeredo/open-font-repository">Open Font Repository</a>, but it is possible to use Google Fonts as a repository as well (and other repositories).</p>
 <p>To search for a font:</p>
 <pre><code>font-catcher search font-name</code></pre>
 <p>To install a font:</p>

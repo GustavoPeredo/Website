@@ -8,6 +8,7 @@ export default function Home() {
 		<link rel="icon" href="/favicon.ico" />
 	</Head>
 	<main>
+	<div id="text">
         	<h1>
           		Gustavo Machado Peredo
         	</h1>
@@ -27,6 +28,7 @@ export default function Home() {
 		</h2>
 		<div className="huge-box green"></div>
 		
+	</div>
 	</main>
 	</div>
   )

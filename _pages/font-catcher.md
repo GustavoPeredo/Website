@@ -12,9 +12,9 @@ Font Catcher relies on `curl` to download fonts, make sure to install it before 
 
 Download one of the following:
 
-![Standard repo](https://github.com/GustavoPeredo/Font-Catcher/releases/download/v1.0.1/font-catcher.zip)
+[Standard repo](https://github.com/GustavoPeredo/Font-Catcher/releases/download/v1.0.1/font-catcher.zip)
 
-![Standard repo + Google Fonts (Recommended)](https://github.com/GustavoPeredo/Font-Catcher/releases/download/v1.0.1/font-catcher.g.zip)
+[Standard repo + Google Fonts (Recommended)](https://github.com/GustavoPeredo/Font-Catcher/releases/download/v1.0.1/font-catcher.g.zip)
 
 Extract and copy to `/usr/bin`! That's it!
 
@@ -28,7 +28,7 @@ cargo install font-catcher
 
 To install with Google Fonts:
 
-1. Grab an API Key on ![Google Font's Website](https://developers.google.com/fonts/docs/developer_api)
+1. Grab an API Key on [Google Font's Website](https://developers.google.com/fonts/docs/developer_api)
 
 2. Run:
 
@@ -38,7 +38,7 @@ GOOGLE_FONTS_KEY="YOUR API KEY HERE" cargo install font-catcher --features googl
 
 # Usage
 
-Font Catcher's commands are aimed at being easy and intuitive to use. If you have used `apt` or `dnf` as package managers once, you will notice the similarities. By default, Font Catcher comes with one repository which is currently WIP: ![Open Font Repository](https://github.com/GustavoPeredo/open-font-repository), but it is possible to use Google Fonts as a repository as well (and other repositories).
+Font Catcher's commands are aimed at being easy and intuitive to use. If you have used `apt` or `dnf` as package managers once, you will notice the similarities. By default, Font Catcher comes with one repository which is currently WIP: [Open Font Repository](https://github.com/GustavoPeredo/open-font-repository), but it is possible to use Google Fonts as a repository as well (and other repositories).
 
 To search for a font:
 

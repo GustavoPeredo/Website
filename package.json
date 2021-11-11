@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "blog": "cd ./blog && parallel pandoc {} -f markdown -t html -o rendered/{.}.html ::: *.md"
+    "gpages": "cd ./_pages && parallel pandoc {} -f markdown -t html5 -o rendered/{.}.html ::: *.md"
   },
   "dependencies": {
     "next": "latest",
