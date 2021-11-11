@@ -49,15 +49,14 @@
 	--color: var(--pink);
 }
 
-body {
-  max-width: var(--bl);
-  margin: 40px auto;
-  padding: 0 10px;
+* {
   font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Cantarell", "Ubuntu", Roboto, "Helvetica Neue";
-  overflow: visible;
-
   color: var(--black);
   background-color: var(--white);
+}
+
+body {
+  margin: 0px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -67,6 +66,18 @@ h1, h2, h3, h4, h5 {
 
 img {
 	width: 100%;
+}
+
+#banner {
+	width: 100vw;
+	height: auto;
+	margin: 0px;
+}
+
+#text {
+  max-width: var(--bl);
+  padding: 0 10px;
+  margin: 40px auto;
 }
 
 .scroller {

@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "blog": "cd ./blog && parallel pandoc {} -f markdown -t html -o rendered/{.}.html ::: *.md"
   },
   "dependencies": {
     "next": "latest",
