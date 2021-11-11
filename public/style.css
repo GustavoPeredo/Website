@@ -1,0 +1,117 @@
+:root {
+        --blue: #3584e4;
+	--green: #33d17a;
+	--yellow: #f6d32d;
+	--orange: #ff7800;
+	--red: #e01b24;
+	--purple: #9141ac;
+	--brown: #986a44;
+	--pink: #ffa6ac;
+
+	--white: #ffffff;
+	--black: #000000;
+
+	--bl: 640px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--white: #000000;
+		--black: #ffffff;
+
+	}
+}
+
+.blue {
+	--color: var(--blue);
+}
+.green {
+	--color: var(--green);
+}
+.yellow {
+	--color: var(--yellow);
+}
+.orange {
+	--color: var(--orange);
+}
+.red {
+	--color: var(--red);
+}
+.purple {
+	--color: var(--purple);
+}
+
+.brown {
+	--color: var(--brown);
+}
+
+.pink {
+	--color: var(--pink);
+}
+
+body {
+  max-width: var(--bl);
+  margin: 40px auto;
+  padding: 0 10px;
+  font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Cantarell", "Ubuntu", Roboto, "Helvetica Neue";
+  overflow: visible;
+
+  color: var(--black);
+  background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+img {
+	width: 100%;
+}
+
+.scroller {
+	overflow: auto;
+	width: calc(50vw + 320px);
+	white-space: nowrap;
+}
+
+@media (max-width: var(--bl)) {
+	.scroller {
+		overflow: auto;
+		width: 100%;
+		white-space: nowrap;
+	}
+}
+
+.box {
+	display: inline-block;
+	width: 240px;
+	height: 480px;
+	color: var(--black);
+	background: linear-gradient(145deg, var(--color), var(--white));
+	border: 2px solid var(--color);
+	border-radius: 24px;
+	overflow: hidden;
+	margin: 16px;
+}
+
+.box > * {
+	height: 50%;
+}
+
+ .box > div > * {
+	 white-space: break-spaces;
+	 text-align: justify;
+	 margin-left: 8px;
+	 margin-right: 8px;
+ }
+
+ .huge-box {
+	width: 100%;
+	min-height: 480px;
+	color: var(--black);
+	background: linear-gradient(145deg, var(--color), var(--white));
+	border: 2px solid var(--color);
+	border-radius: 24px;
+	margin: 16px;
+ }
