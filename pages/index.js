@@ -49,6 +49,7 @@ export default function Home(props) {
 		<h2>
 			Projects
 		</h2>
+		<div className="scroller">
 		{props.projectMaps.map(projectMap => 
 			<Link href={'/projects/' + projectMap.project}><a>
 			<div className={'box ' + projectMap.color}>
@@ -62,7 +63,7 @@ export default function Home(props) {
 			</div>
 			</a></Link>
 		)}
-	  	<div className="scroller"></div>
+	  	</div>
 		<h2>
 			About me
 		</h2>
