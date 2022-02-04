@@ -180,3 +180,7 @@ code {
 	margin-left: auto;
 	margin-right: auto;
  }
+
+ .capitalize {
+	text-transform: capitalize;
+ }

@@ -1,45 +1,20 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { getProjects, getColor, getProjectData, getBanner } from './projects_file'
-import { getBlogs, getBlogColor, getBlogData, getBlogBanner } from './blogs'
-import me from '../public/images/me.png'
 
-export async function getStaticProps() {
-	const projects = getProjects()
-	const projectMaps = projects.map(project => {
-		const [name, content] = getProjectData(project)
-		const short_content = content.split("<p>")[1].split("</p>")[0]
-		const color = getColor(project)
-		const banner = getBanner(project)
-		return {
-			name,
-			short_content,
-			color,
-			banner,
-			project: project,
-		}
-	})
-	const blogs = getBlogs()
-	const blogMaps = blogs.map(blog => {
-		const [name, content] = getBlogData(blog)
-		const short_content = content.split("<p>")[1].split("</p>")[0]
-		const color = getBlogColor(blog)
-		const banner = getBlogBanner(blog)
-		return {
-			name,
-			short_content,
-			color,
-			banner,
-			blog: blog,
-		}
-	})
-
-	return {
-		props: {
-			projectMaps,
-			blogMaps
-		}
-  	}
+export async function getStaticProps(params) {
+	const prefix = (process.env.DEVEL === "yes" ? 'http://localhost:3000/' : 'https://gustavomachadoperedo.xyz/');
+	const preview = await Promise.all(
+		["blog", "projects"].map(async location => {
+			const res = await fetch(prefix + location);
+			var mod = "<div/>  ";
+			if (res.status === 200) {
+				const data = await res.text();
+				mod = data.split("main>")[1];
+			} 
+			return {[location]: mod.substring(0, mod.length - 2)};
+		})
+	);
+	return {props: { preview }};
 }
 
 export default function Home(props) {
@@ -57,42 +32,6 @@ export default function Home(props) {
 	  	<h4>
 	  		My Website :)
 		</h4>
-		<h2>
-			Blog
-		</h2>
-	  	<div className="scroller">
-		{props.blogMaps.map(blogMap => 
-			<Link href={'/blog/' + blogMap.blog}><a>
-			<div className={'box ' + blogMap.color}>
-				<img src={blogMap.banner}/>
-				<div>
-					<h3>{blogMap.name}</h3>
-					<p 
-						dangerouslySetInnerHTML={{ __html: blogMap.short_content }}
-					/>
-				</div>
-			</div>
-			</a></Link>
-		)}
-		</div>
-		<h2>
-			Projects
-		</h2>
-		<div className="scroller">
-		{props.projectMaps.map(projectMap => 
-			<Link href={'/projects/' + projectMap.project}><a>
-			<div className={'box ' + projectMap.color}>
-				<img src={projectMap.banner}/>
-				<div>
-					<h3>{projectMap.name}</h3>
-					<p 
-						dangerouslySetInnerHTML={{ __html: projectMap.short_content }}
-					/>
-				</div>
-			</div>
-			</a></Link>
-		)}
-	  	</div>
 		<h2>
 			About me
 		</h2>
@@ -179,7 +118,9 @@ export default function Home(props) {
 			<li>Volunteer as English teacher at Sociedade Crescer (2019)</li>
 			<li>Font Downloader is part of the GNOME Circle initiative (2020)</li>
 		</div>
-		
+		{props.preview.map(category =>
+			<div dangerouslySetInnerHTML={{__html: category[Object.keys(category)[0]]}}/>
+		)}
 	</div>
 	</main>
 	</div>
