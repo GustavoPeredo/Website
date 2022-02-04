@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 export function getProjects() {
-	const postsDirectory = path.join(process.cwd(), '_pages/rendered')
+	const postsDirectory = path.join(process.cwd(), '_pages/rendered/projects/')
   	const files = fs.readdirSync(postsDirectory)
 	return files.map(file => {
     		const filePath = path.join(postsDirectory, file)
@@ -31,7 +31,7 @@ export function getColor(project) {
 }
 
 export function getProjectData(project) {
-	const textPath = '_pages/rendered/'
+	const textPath = '_pages/rendered/projects/'
 	
 	const textFiles = fs.readdirSync(textPath)
 	const projectFile = textPath + textFiles.find(file => {

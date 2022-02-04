@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { getProjects, getColor, getProjectData, getBanner } from '../projects'
+import { getProjects, getColor, getProjectData, getBanner } from '../projects_file'
 
 export async function getStaticProps() {
 	const projects = getProjects()
@@ -25,30 +25,19 @@ export async function getStaticProps() {
   	}
 }
 
-export default function Home(props) {
+export default function Page(props) {
   return (
 	<div>
 	<Head>
-		<title>Gustavo Machado Peredo</title>
+		<title>Projects</title>
 		<link rel="icon" href="/favicon.ico" />
 	</Head>
 	<main>
 	<div id="text">
-        	<h1>
-          		Gustavo Machado Peredo
-        	</h1>
-	  	<h4>
-	  		My Website :)
-		</h4>
-		<h2>
-			Blog
-		</h2>
-	  	<div className="scroller">
-			
-		</div>
 		<h2>
 			Projects
 		</h2>
+		<div className="scroller">
 		{props.projectMaps.map(projectMap => 
 			<Link href={'/projects/' + projectMap.project}><a>
 			<div className={'box ' + projectMap.color}>
@@ -62,12 +51,7 @@ export default function Home(props) {
 			</div>
 			</a></Link>
 		)}
-	  	<div className="scroller"></div>
-		<h2>
-			About me
-		</h2>
-		<div className="huge-box green"></div>
-		
+		</div>
 	</div>
 	</main>
 	</div>

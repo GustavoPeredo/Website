@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { getProjects, getColor, getProjectData, getBanner } from '../projects'
+import { getProjects, getColor, getProjectData, getBanner } from '../projects_file'
 
 export async function getStaticPaths() {
 	const paths = getProjects().map(project => {

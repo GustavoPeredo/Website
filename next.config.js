@@ -4,7 +4,7 @@ module.exports = {
     if (!isServer) {
       config.resolve.fallback = {
         fs: false,
-	path: false,
+	      path: false,
       };
     }
 

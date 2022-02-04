@@ -1,5 +1,5 @@
 :root {
-        --blue: #3584e4;
+    --blue: #3584e4;
 	--green: #33d17a;
 	--yellow: #f6d32d;
 	--orange: #ff7800;
@@ -50,6 +50,10 @@
 
 .pink {
 	--color: var(--pink);
+}
+
+.black {
+	--color: var(--black);
 }
 
 * {
@@ -163,4 +167,16 @@ code {
 	border: 2px solid var(--color);
 	border-radius: 24px;
 	margin: 16px;
+	padding: 16px;
+ }
+
+ .huge-box > h1, h2, h3, h4, h5 {
+	 color: var(--black);
+ }
+
+ .center {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
  }
