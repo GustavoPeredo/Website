@@ -13,6 +13,9 @@ function getColor(post) {
 		case "font-downloader":
 			color = "green";
 			break;
+		case "nix-flatpak":
+			color = "brown";
+			break;
 		default:
 			color = "black";
 			break;
