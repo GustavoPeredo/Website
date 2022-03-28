@@ -32,25 +32,37 @@ export default function Home(props) {
 	  	<h4>
 	  		My Website :)
 		</h4>
+		{props.preview.map(category =>
+			<div dangerouslySetInnerHTML={{__html: category[Object.keys(category)[0]]}}/>
+		)}
+		<AboutMe/>
+	</div>
+	</main>
+	</div>
+  )
+}
+
+function AboutMe() {
+	return <>
 		<h2>
 			About me
 		</h2>
 		<div className="huge-box green">
 			<img src='/images/me.png' className="center" style={{width: "196px"}}/>
 			<h2>Interests</h2>
-			
+
 			<li>FOSS Enthusiast</li>
 			<li>Learning new things</li>
 			<li>Languages, Economics and Philosophy</li>
-			
+
 			<h2>Skills</h2>
-			
+
 			<h3>Interpersonal</h3>
 			<li>Leadership</li>
 			<li>Receiving Feedback</li>
 			<li>Discipline</li>
 			<li>Self-esteem</li>
-			
+
 			<h3>Software Development</h3>
 			<li>
 				<Link href="https://python.org">Python</Link>,
@@ -68,7 +80,7 @@ export default function Home(props) {
 			</li>
 			<ul>Experience with AWS deployments and various types of automation</ul>
 			<li>Others: Shell scripting, api calls, git, linux, <Link href="https://flatpak.org">flatpak</Link> and SQL </li>
-			
+
 			<h3>Languages</h3>
 			<li>Proficient</li>
 			<ul>Portuguese (native)</ul>
@@ -78,14 +90,14 @@ export default function Home(props) {
 			<li>Beginner</li>
 			<ul>French <Link href="https://fiaf.org/exams/delf-dalf/">DELF A2</Link></ul>
 			<ul>Spanish (no certificate)</ul>
-			
+
 			<h3>Others</h3>
 			<li>Image manipulation</li>
 			<li>Vector drawing</li>
 			<li>Video editing</li>
-			
+
 			<h2>Background</h2>
-			
+
 			<h3>Academic</h3>
 			<li><Link href="https://oec.uzh.ch/de/studies/bachelor/it/wi.html">Economics and Informatics Student at the University of Zürich</Link></li>
 			<ul>2020 - Current</ul>
@@ -101,7 +113,7 @@ export default function Home(props) {
 			<ul>Working with Django and PostgreSQL in the backend and React in the frontend</ul>
 			<ul>2021-current</ul>
 			<li>Software and Solutions Developer (<Link href="https://software.libellula.eu">Libellula do Brasil</Link>)</li>
-			<ul>Worked with Powershell, C# and Python to 
+			<ul>Worked with Powershell, C# and Python to
 				automate CNC code generation.</ul>
 			<ul>2021</ul>
 			<li>Frontend Developer (<Link href="https://globalissuesnetwork.org">Global Issues Network</Link>)</li>
@@ -109,7 +121,7 @@ export default function Home(props) {
 			<ul>2020-2021</ul>
 
 			<h2>Other achievements and experiences</h2>
-			
+
 			<li>Best Speaker Award @ Salvador Model United Nations (2018)</li>
 			<li>Student Council president (2016 and 2020)</li>
 			<li>TEDxYouth@CHPR event organizer (2020)</li>
@@ -118,11 +130,5 @@ export default function Home(props) {
 			<li>Volunteer as English teacher at Sociedade Crescer (2019)</li>
 			<li>Font Downloader is part of the GNOME Circle initiative (2020)</li>
 		</div>
-		{props.preview.map(category =>
-			<div dangerouslySetInnerHTML={{__html: category[Object.keys(category)[0]]}}/>
-		)}
-	</div>
-	</main>
-	</div>
-  )
+	</>
 }
