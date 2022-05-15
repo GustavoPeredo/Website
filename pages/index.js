@@ -103,7 +103,7 @@ function AboutMe(props) {
 			<h3>Academic</h3>
 			<li><Link href="https://oec.uzh.ch/de/studies/bachelor/it/wi.html">Economics and Informatics Student at the University of Zürich</Link></li>
 			<ul>2020 - Current</ul>
-			<li><Link href="https://chpr.aesb.com.br">Swiss School of Curitiba</Link></li>
+			<li>Highschool</li>
 			<ul>Average grade: 8/10 (school website)</ul>
 			<ul>2016 - 2020</ul>
 			<li><Link href="https://ibo.org/programmes/diploma-programme/">International Baccalaureate</Link></li>
