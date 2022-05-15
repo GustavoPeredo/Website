@@ -1,0 +1,14 @@
+{
+    "pages_directory": "_pages/rendered",
+    "banners_directory": "public/images/banners",
+    "default_color": "green",
+    "dafault_post_color": "white",
+    "default_banner": "public/images/banners/hello-world.png",
+    "posts_colors": {
+        "nix-flatpak": "brown",
+        "font-catcher": "orange",
+        "font-downloader": "green",
+        "re-fitting-everything-together": "gray",
+        "atom-os": "gray"
+    }
+}

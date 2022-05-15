@@ -1,12 +1,12 @@
 # What, Why and How to Nix and Flatpak
 
-Flatpak and Nix are two very distinct technologies, but both can be seen as
-
-"[post-modern](https://gist.github.com/bureado/792037b71229db3c37975e70e8a9c54a)"
+Flatpak and Nix are two very distinct technologies, but both can be seen as post-modern
 package managers, in this blog post I'll write what these two technologies are,
 why they are important for different uses and how to get involved with it.
 This is a developer focused article, so much of the language used will be
 targeted at developers.
+
+*[post-modern](https://gist.github.com/bureado/792037b71229db3c37975e70e8a9c54a)
 
 ## What
 

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1372"
+   viewBox="0 0 507.99999 363.00835"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="Partitions-AtomOS.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     width="1920px"
+     inkscape:zoom="0.3783186"
+     inkscape:cx="876.24559"
+     inkscape:cy="549.80115"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid926" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect14772"
+       width="158.75"
+       height="74.083336"
+       x="328.08334"
+       y="285.75"
+       ry="10.583333" />
+    <rect
+       style="fill:#3584e4;stroke-width:0.585862"
+       id="rect950"
+       width="135.46666"
+       height="135.46666"
+       x="141.28745"
+       y="5.2916737" />
+    <rect
+       style="fill:#1a5fb4;stroke-width:0.585862"
+       id="rect950-3"
+       width="135.46666"
+       height="135.46666"
+       x="5.2916756"
+       y="141.28752" />
+    <rect
+       style="fill:#1c71d8;stroke-width:0.585862"
+       id="rect950-3-6"
+       width="135.46666"
+       height="135.46666"
+       x="141.28745"
+       y="141.28745" />
+    <rect
+       style="fill:#e5a50a;stroke-width:0.534399"
+       id="rect950-3-6-3"
+       width="225.42488"
+       height="67.73333"
+       x="277.28345"
+       y="209.02087" />
+    <rect
+       style="fill:#f5c211;stroke-width:0.534399"
+       id="rect950-3-6-3-8"
+       width="225.42488"
+       height="67.73333"
+       x="277.28348"
+       y="141.28752" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.7px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="379.25809"
+       y="179.95479"
+       id="text28280-2"><tspan
+         sodipodi:role="line"
+         id="tspan28278-0"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:12.7px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';fill:#ffffff;stroke-width:0.264583"
+         x="379.25809"
+         y="179.95479">Nix</tspan></text>
+    <rect
+       style="fill:#f8e45c;stroke-width:0.534399"
+       id="rect950-3-6-3-8-7-9"
+       width="225.42488"
+       height="67.73333"
+       x="277.28351"
+       y="5.2916694" />
+    <rect
+       style="fill:#f6d32d;stroke-width:0.534399"
+       id="rect950-3-6-3-8-7"
+       width="225.42488"
+       height="67.73333"
+       x="277.28345"
+       y="73.025002" />
+    <rect
+       style="fill:#2ec27e;stroke-width:0.414267"
+       id="rect950-3-6-7"
+       width="67.73333"
+       height="135.46666"
+       x="5.2916679"
+       y="5.2916698" />
+    <rect
+       style="fill:#33d17a;stroke-width:0.414267"
+       id="rect950-3-6-7-5"
+       width="67.73333"
+       height="135.46666"
+       x="73.024773"
+       y="5.2916684" />
+    <rect
+       style="fill:#1c71d8;stroke-width:1.6"
+       id="rect8084"
+       width="10.583333"
+       height="10.583333"
+       x="349.25"
+       y="296.33331" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="362.47903"
+       y="305.32913"
+       id="text11050"><tspan
+         sodipodi:role="line"
+         id="tspan11048"
+         style="stroke-width:0.264583"
+         x="362.47903"
+         y="305.32913">System Partitions</tspan></text>
+    <rect
+       style="fill:#33d17a;stroke-width:1.6"
+       id="rect8084-6"
+       width="10.583333"
+       height="10.583333"
+       x="349.25"
+       y="316.97098" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="362.47903"
+       y="325.9668"
+       id="text11050-2"><tspan
+         sodipodi:role="line"
+         id="tspan11048-9"
+         style="stroke-width:0.264583"
+         x="362.47903"
+         y="325.9668">Boot Partitions</tspan></text>
+    <rect
+       style="fill:#f6d32d;stroke-width:1.6"
+       id="rect8084-6-1"
+       width="10.583333"
+       height="10.583333"
+       x="349.25"
+       y="338.66666" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="362.47903"
+       y="347.66248"
+       id="text11050-2-2"><tspan
+         sodipodi:role="line"
+         id="tspan11048-9-7"
+         style="stroke-width:0.264583"
+         x="362.47903"
+         y="347.66248">Data Partitions</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="208.90434"
+       y="76.697418"
+       id="text17231"><tspan
+         sodipodi:role="line"
+         id="tspan17229"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:12.7px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="208.90434"
+         y="76.697418">Root A</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="208.90434"
+         y="90.671593"
+         id="tspan40134">1.4GB - 2GB</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="73.136124"
+       y="206.38774"
+       id="text17231-0"><tspan
+         sodipodi:role="line"
+         id="tspan17229-9"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:12.7px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="73.136124"
+         y="206.38774">Recovery</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="73.136124"
+         y="220.36192"
+         id="tspan51690">1.4GB - 2GB</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:7.05556px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="73.136124"
+         y="233.59105"
+         id="tspan55754">(optional)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="209.1319"
+       y="206.38766"
+       id="text17231-0-3"><tspan
+         sodipodi:role="line"
+         id="tspan17229-9-6"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:12.7px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="209.1319"
+         y="206.38766">Root B</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="209.1319"
+         y="220.36185"
+         id="tspan49504">1.4GB - 2GB</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="38.790024"
+       y="70.391891"
+       id="text17231-0-0"><tspan
+         sodipodi:role="line"
+         id="tspan17229-9-62"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:12.7px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="38.790024"
+         y="70.391891">Boot</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="39.848347"
+         y="84.366066"
+         id="tspan69716">1GB </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="106.93906"
+       y="70.391891"
+       id="text17231-0-0-6"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:12.7px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="106.93906"
+         y="70.391891"
+         id="tspan62874">EFI</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="106.93906"
+         y="84.366066"
+         id="tspan62878">512MB</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:7.76111px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="106.93906"
+         y="97.595192"
+         id="tspan66822">(optional)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.7px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="371.87302"
+       y="247.23094"
+       id="text28280"><tspan
+         sodipodi:role="line"
+         id="tspan28278"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:12.7px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';fill:#ffffff;stroke-width:0.264583"
+         x="371.87302"
+         y="247.23094">Home</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.7px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="379.42316"
+       y="111.23507"
+       id="text28280-2-7"><tspan
+         sodipodi:role="line"
+         id="tspan28278-0-5"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:12.7px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';fill:#ffffff;stroke-width:0.264583"
+         x="379.42316"
+         y="111.23507">Var</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.7px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="389.65268"
+       y="42.473034"
+       id="text28280-2-7-9"><tspan
+         sodipodi:role="line"
+         id="tspan28278-0-5-2"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:12.7px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="389.65268"
+         y="42.473034">Snapshots</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:7.76111px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="389.65268"
+         y="58.348034"
+         id="tspan57166">(optional)</tspan></text>
+  </g>
+</svg>

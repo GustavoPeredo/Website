@@ -5,5 +5,6 @@
       pandoc
       parallel
       gnused
+      entr
     ];
 }

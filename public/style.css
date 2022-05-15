@@ -1,4 +1,50 @@
 :root {
+    --Blue_1: rgb(153, 193, 241);
+    --Blue_2: rgb(98, 160, 234);
+    --Blue_3: rgb(53, 132, 228);
+    --Blue_4: rgb(28, 113, 216);
+    --Blue_5: rgb(26, 95, 180);
+    --Green_1: rgb(143, 240, 164);
+    --Green_2: rgb(87, 227, 137);
+    --Green_3: rgb(51, 209, 122);
+    --Green_4: rgb(46, 194, 126);
+    --Green_5: rgb(38, 162, 105);
+    --Yellow_1: rgb(249, 240, 107);
+    --Yellow_2: rgb(248, 228, 92);
+    --Yellow_3: rgb(246, 211, 45);
+    --Yellow_4: rgb(245, 194, 17);
+    --Yellow_5: rgb(229, 165, 10);
+    --Orange_1: rgb(255, 190, 111);
+    --Orange_2: rgb(255, 163, 72);
+    --Orange_3: rgb(255, 120, 0);
+    --Orange_4: rgb(230, 97, 0);
+    --Orange_5: rgb(198, 70, 0);
+    --Red_1: rgb(246, 97, 81);
+    --Red_2: rgb(237, 51, 59);
+    --Red_3: rgb(224, 27, 36);
+    --Red_4: rgb(192, 28, 40);
+    --Red_5: rgb(165, 29, 45);
+    --Purple_1: rgb(220, 138, 221);
+    --Purple_2: rgb(192, 97, 203);
+    --Purple_3: rgb(145, 65, 172);
+    --Purple_4: rgb(129, 61, 156);
+    --Purple_5: rgb( 97, 53, 131);
+    --Brown_1: rgb(205, 171, 143);
+    --Brown_2: rgb(181, 131, 90);
+    --Brown_3: rgb(152, 106, 68);
+    --Brown_4: rgb(134, 94, 60);
+    --Brown_5: rgb(99, 69, 44);
+    --Light_1: rgb(255, 255, 255);
+    --Light_2: rgb(246, 245, 244);
+    --Light_3: rgb(222, 221, 218);
+    --Light_4: rgb(192, 191, 188);
+    --Light_5: rgb(154, 153, 150);
+    --Dark_1: rgb(119, 118, 123);
+    --Dark_2: rgb(94, 92, 100);
+    --Dark_3: rgb(61, 56, 70);
+    --Dark_4: rgb(36, 31, 49);
+    --Dark_5: rgb(0, 0, 0);
+
     --blue: #3584e4;
 	--green: #33d17a;
 	--yellow: #f6d32d;
@@ -14,46 +60,78 @@
 	--gray: #f0f0f0;
 	
 	--bl: 640px;
+
+	--wallaper: url('/images/wallpaper-repeat.png');
+}
+
+.blue {
+	--color: var(--Blue_3);
+	--light-color: var(--Blue_1);
+	--dark-color: var(--Blue_5);
+}
+.green {
+	--color: var(--Green_3);
+	--light-color: var(--Green_1);
+	--dark-color: var(--Green_5);
+}
+.yellow {
+	--color: var(--Yellow_3);
+	--light-color: var(--Yellow_1);
+	--dark-color: var(--Yellow_5);
+}
+.orange {
+	--color: var(--Orange_3);
+	--light-color: var(--Orange_1);
+	--dark-color: var(--Orange_5);
+}
+.red {
+	--color: var(--Red_3);
+	--light-color: var(--Red_1);
+	--dark-color: var(--Red_5);
+}
+.purple {
+	--color: var(--Purple_3);
+	--light-color: var(--Purple_1);
+	--dark-color: var(--Purple_5);
+}
+.brown {
+	--color: var(--Brown_3);
+	--light-color: var(--Brown_1);
+	--dark-color: var(--Brown_5);
+}
+.pink {
+	--color: var(--pink);
+	--light-color: var(--pink);
+	--dark-color: var(--pink);
+}
+
+.gray {
+	--color: var(--Dark_3);
+	--dark-color: var(--Dark_4);
+	--light-color: var(--Dark_2);
+}
+.black {
+	--color: var(--Dark_5);
+	--light-color: var(--Dark_1);
+	--dark-color: var(--Dark_3);
+}
+.white {
+	--color: var(--Light_1);
+	--light-color: var(--Light_3);
+	--dark-color: var(--Light_5);
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
+		--Light_1: rgb(0, 0, 0);
+		--Dark_5: rgb(255, 255, 255);
+
 		--white: #000000;
 		--black: #ffffff;
 
 		--gray: #0f0f0f;
+		--wallaper: url('/images/wallpaper-repeat-dark.png');
 	}
-}
-
-.blue {
-	--color: var(--blue);
-}
-.green {
-	--color: var(--green);
-}
-.yellow {
-	--color: var(--yellow);
-}
-.orange {
-	--color: var(--orange);
-}
-.red {
-	--color: var(--red);
-}
-.purple {
-	--color: var(--purple);
-}
-
-.brown {
-	--color: var(--brown);
-}
-
-.pink {
-	--color: var(--pink);
-}
-
-.black {
-	--color: var(--black);
 }
 
 * {
@@ -64,21 +142,14 @@
 	margin: 0px;
 }
 
-#text {
+#main-text {
 	max-width: var(--bl);
-	padding: 0 10px;
+	padding: 0 0px;
 	margin: 40px auto;
 }
 
 img {
 	width: 100%;
-}
-
-body {
-	margin: 0px;
-	color: var(--black);
-	background-color: var(--white);
-
 }
 
 h1, h2, h3, h4, h5 {
@@ -91,7 +162,6 @@ pre {
 	background-color: var(--gray);
 	overflow: auto;
 	width: 100%;
-
 }
 
 code {
@@ -99,15 +169,34 @@ code {
 	font-family: monospace;
 }
 
+body {
+	background-image: var(--wallaper);
+	overflow-x: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+
+main > div {
+	background: var(--white);
+	border-radius: 8px;
+	border-width: 12px;
+	border-style: solid;
+	border-color: var(--white);
+	color: var(--black);
+}
+
+li {
+	margin: 8px;
+}
 
 .scroller {
 	overflow: auto;
-	width: calc(50vw + 313px);
+	width: calc(50vw + 320px);
 	height: 548px;
 	white-space: nowrap;
 }
 
-@media (max-width: var(--bl)) {
+@media (max-width: 858px) {
 	.scroller {
 		overflow: auto;
 		width: 100%;
@@ -125,12 +214,15 @@ code {
 	width: 240px;
 	height: 480px;
 	color: var(--black);
-	background: linear-gradient(145deg, var(--color), var(--white));
-	border: 2px solid var(--color);
-	border-radius: 24px;
+	border-radius: 8px;
+	background: var(--color);
 	overflow: hidden;
 	margin: 16px;
 	transition: all 0.5s;
+}
+
+.box > h1, h2, h3, h4, h5 {
+	color: var(--black);
 }
 
 .box:hover {
@@ -152,26 +244,31 @@ code {
 
 .box > div > * {
 	text-align: justify;
+	white-space: break-spaces;
 	margin: auto;
 	width: 220px;
 	height: 60px;
-	overflow: hidden;
-	text-overflow: ellipsis;
  }
 
  .huge-box {
-	width: 100%;
+	display: block;
+	width: fit-content;
+	height: fit-content;
 	min-height: 480px;
-	color: var(--black);
-	background: linear-gradient(145deg, var(--color), var(--white));
-	border: 2px solid var(--color);
-	border-radius: 24px;
-	margin: 16px;
 	padding: 16px;
  }
 
- .huge-box > h1, h2, h3, h4, h5 {
-	 color: var(--black);
+ .huge-box:hover {
+	width: fit-content;
+	min-height: 480px;
+	height: unset;
+ }
+
+ .huge-box > img {
+	width: unset;
+	position: unset;
+	left: unset;
+    transform: unset;
  }
 
  .center {
@@ -184,3 +281,7 @@ code {
  .capitalize {
 	text-transform: capitalize;
  }
+
+a {
+  color: inherit;
+}

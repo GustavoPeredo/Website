@@ -4,70 +4,61 @@ import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
 
+import data from "/website.json"
+
 function getColor(post) {
-	var color = "black"
-	switch (post) {
-		case "font-catcher":
-			color = "orange";   
-			break;
-		case "font-downloader":
-			color = "green";
-			break;
-		case "nix-flatpak":
-			color = "brown";
-			break;
-		default:
-			color = "black";
-			break;
+	if (!(post in data.posts_colors)) {
+		return data.dafault_post_color;
 	}
-	return color;
+	return data.posts_colors[post];
 }
 
 function getBanner(post) {
-	const imagePath = 'public/images/banners/';
+	const imagePath = data.banners_directory;
 
 	const imageFiles = fs.readdirSync(imagePath);
-	const projectBanner = imagePath.split("public")[1] + imageFiles.find(file => {
+	const projectBanner = imagePath.split("public")[1] + "/" + imageFiles.find(file => {
 		return path.basename(file, path.extname(file)) === post;
 	})
 	return projectBanner
 }
 
 function getData(category, post) {
-	const textPath = `_pages/rendered/${category}/`;
+	const postFile = `${data.pages_directory}/${category}/${post}.html`;
 	
-	const textFiles = fs.readdirSync(textPath);
-	const postFile = textPath + textFiles.find(file => {
-		return file.includes(post);
-	});
-
 	const postContent = fs.readFileSync(postFile, 'utf8');
+	const postDate = fs.statSync(postFile
+									.replace("rendered\/", "")
+									.replace("html", "md")
+								).ctime.toString();
 	const postName = postContent.split('\n')[0].split(">")[1].split("<")[0];
-	return [postName, postContent];
+	return [postName, postContent, postDate];
 }
 
 export function getPostMap(category, post) {
-    const [name, content] = getData(category, post)
-	const short_content = content.split("<p>")[1].split("</p>")[0]
-	const color = getColor(post)
-	const banner = getBanner(post)
+    const [name, content, date] = getData(category, post);
+	const short_content = content.split("<p>")[1].split("</p>")[0].split(" ").slice(0,32).join(" ") + " >>";
+	const color = getColor(post);
+	const banner = getBanner(post);
 	return {
 		name,
+		date,
 		short_content,
         content,
 		color,
 		banner,
+		category,
 		post: post,
 	}
 }
 
 export function getPosts(category) {
-	const postsDirectory = path.join(process.cwd(), `_pages/rendered/${category}/`);
+	const postsDirectory = path.join(`${data.pages_directory}/${category}/`);
   	const files = fs.readdirSync(postsDirectory);
 	return files.map(file => {
     	const filePath = path.join(postsDirectory, file);
 		const fileExt = path.extname(filePath);
-		if (fileExt != "") {
+		if (fileExt === ".html") {
 			const fileName = path.basename(filePath, fileExt);
 			return fileName;
 		}
@@ -76,15 +67,16 @@ export function getPosts(category) {
 
 function postMaps(category) {
     const posts = getPosts(category);
-	const postsMap = posts.map(post => {
+	const postsMap = posts.map((post) => {
 		return getPostMap(category, post);
-	});
-
+	}).sort(
+		(a,b) => { return (new Date(b.date) - new Date(a.date)); }
+	);
 	return postsMap;
 }
 
 export async function getStaticPaths() {
-	const paths = fs.readdirSync("_pages/rendered/").map(categories => {
+	const paths = fs.readdirSync(data.pages_directory).map(categories => {
 		return { params: { categories: categories}}
 	})
 	return {
@@ -109,10 +101,12 @@ export default function Page(props) {
 	<div>
 	<Head>
 		<title>{props.category}</title>
-		<link rel="icon" href="/favicon.ico" />
 	</Head>
+	/<Link href="/">home</Link>/{props.category}
+	<br/>
+	<br/>
 	<main>
-	<div id="text">
+	<div id="main-text">
 		<h2 className="capitalize">
 			{props.category}
 		</h2>
@@ -120,12 +114,10 @@ export default function Page(props) {
 		{props.postsMap.map(postMap => 
 			<Link href={`/${props.category}/` + postMap.post}><a>
 			<div className={'box ' + postMap.color}>
-				<img src={postMap.banner}/>
+				<img loading="lazy" src={postMap.banner}/>
 				<div>
 					<h3>{postMap.name}</h3>
-					<p 
-						dangerouslySetInnerHTML={{ __html: postMap.short_content }}
-					/>
+					<p dangerouslySetInnerHTML={{ __html: postMap.short_content }}/>
 				</div>
 			</div>
 			</a></Link>

@@ -1,5 +1,6 @@
 import '../public/style.css'
+import '../public/style-mov.css'
 
-export default function MyWebsite({ Component, pageProps }) {
-	return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  return <Component {...pageProps} />
 }

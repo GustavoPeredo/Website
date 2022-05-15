@@ -1,9 +1,13 @@
 import Head from 'next/head'
+import Link from 'next/link'
+
 import fs from 'fs'
 import { getPosts, getPostMap } from './index'
 
+import data from "/website.json"
+
 export async function getStaticPaths() {
-	const paths = fs.readdirSync("_pages/rendered/").map(categories => {
+	const paths = fs.readdirSync(data.pages_directory).map(categories => {
         return getPosts(categories).map(post => {
             return {params: {
                 categories: categories,
@@ -20,7 +24,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     const post = getPostMap(
         context.params.categories,
-        context.params.post
+        context.params.post,
     ); 
 	return {
 		props: {
@@ -30,12 +34,13 @@ export async function getStaticProps(context) {
 }
 
 export default function Page(props) {
-	const color_var = {"--color": "var(--" + props.post.color + ")"};
-	return <div> 
+	return (<div>
 		<Head>
 			<title>{props.post.name}</title>
-			<link rel="icon" href="/favicon.ico"/>
 		</Head>
+		<div className={props.post.color}>
+		/<Link href="/">home</Link>/<Link href={"/" + props.post.category}>{props.post.category}</Link>/{props.post.post}
+		</div>
 		<main>
 			<img
 				id="banner"
@@ -43,10 +48,10 @@ export default function Page(props) {
 				alt={props.post.name}
 			/>
 			<div
-				id="text" 
-				style={ color_var }
+				id="main-text"
+				className={props.post.color}
 				dangerouslySetInnerHTML={{ __html: props.post.content }}
 			/> 
 		</main>
-	</div>
+	</div>)
 }

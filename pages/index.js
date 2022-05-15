@@ -1,12 +1,14 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
+import data from '/website.json'
+
 export async function getStaticProps(params) {
 	const prefix = (process.env.DEVEL === "yes" ? 'http://localhost:3000/' : 'https://gustavomachadoperedo.xyz/');
 	const preview = await Promise.all(
 		["blog", "projects"].map(async location => {
 			const res = await fetch(prefix + location);
-			var mod = "<div/>  ";
+			let mod = "<div/>  ";
 			if (res.status === 200) {
 				const data = await res.text();
 				mod = data.split("main>")[1];
@@ -14,40 +16,40 @@ export async function getStaticProps(params) {
 			return {[location]: mod.substring(0, mod.length - 2)};
 		})
 	);
-	return {props: { preview }};
+	return {props: {
+		bg_color: data.default_color,
+		preview
+	}};
 }
 
 export default function Home(props) {
   return (
-	<div>
+	<>
 	<Head>
 		<title>Gustavo Machado Peredo</title>
-		<link rel="icon" href="/favicon.ico" />
 	</Head>
-	<main>
-	<div id="text">
-        	<h1>
+	<div id="main-text">
+        	<h1 className={props.bg_color}>
           		Gustavo Machado Peredo
         	</h1>
 	  	<h4>
 	  		My Website :)
 		</h4>
 		{props.preview.map(category =>
-			<div dangerouslySetInnerHTML={{__html: category[Object.keys(category)[0]]}}/>
+			<div id={category} dangerouslySetInnerHTML={{__html: category[Object.keys(category)[0]]}}/>
 		)}
-		<AboutMe/>
+		<AboutMe bg_color={props.bg_color}/>
 	</div>
-	</main>
-	</div>
+	</>
   )
 }
 
-function AboutMe() {
+function AboutMe(props) {
 	return <>
 		<h2>
 			About me
 		</h2>
-		<div className="huge-box green">
+		<div className={"box huge-box " + props.bg_color}>
 			<img src='/images/me.png' className="center" style={{width: "196px"}}/>
 			<h2>Interests</h2>
 

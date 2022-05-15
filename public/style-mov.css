@@ -1,0 +1,29 @@
+/* Animated background */
+
+
+/* Border Shadow */
+.box {
+	box-shadow:
+		7px 7px 14px var(--dark-color),
+		-7px -7px 14px var(--light-color);	
+}
+
+main > div {
+	box-shadow:
+		7px 7px 14px var(--white),
+		-7px -7px 14px var(--gray);
+}
+
+@media (prefers-color-scheme: dark) {
+	.box {
+		box-shadow:
+			7px 7px 14px var(--dark-color),
+			-7px -7px 14px var(--color);
+	}
+
+	main > div {
+		box-shadow:
+			7px 7px 14px var(--white),
+			-7px -7px 14px var(--gray);
+	}
+}

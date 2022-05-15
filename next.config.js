@@ -3,7 +3,7 @@ module.exports = {
     // Fixes npm packages that depend on `fs` module
     if (!isServer) {
       config.resolve.fallback = {
-        fs: false,
+          fs: false,
 	      path: false,
       };
     }

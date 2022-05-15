@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="720"
+   height="700"
+   viewBox="0 0 190.49999 185.20835"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="AB-Update.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     units="px"
+     width="900px"
+     inkscape:zoom="0.66804804"
+     inkscape:cx="288.15293"
+     inkscape:cy="390.69046"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2628" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="5.2916665"
+       y="15.875"
+       id="text3754"><tspan
+         sodipodi:role="line"
+         id="tspan3752"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';stroke-width:0.264583"
+         x="5.2916665"
+         y="15.875">Update procedure</tspan></text>
+    <rect
+       style="fill:#3584e4;stroke-width:1.6"
+       id="rect7122"
+       width="52.916668"
+       height="21.166668"
+       x="15.874993"
+       y="37.041676" />
+    <rect
+       style="fill:#1c71d8;stroke-width:1.6"
+       id="rect7122-3"
+       width="52.916668"
+       height="21.166668"
+       x="74.083344"
+       y="37.041676" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="42.003143"
+       y="42.569244"
+       id="text8417"><tspan
+         sodipodi:role="line"
+         id="tspan8415"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:8.46667px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="42.003143"
+         y="42.569244"
+         dy="4">Root A*</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:7.05556px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="42.003143"
+         y="53.15258"
+         id="tspan10141">(old)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="100.21148"
+       y="42.569244"
+       id="text8417-6"><tspan
+         sodipodi:role="line"
+         id="tspan8415-7"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:8.46667px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="100.21148"
+         y="42.569244"
+         dy="4">Root B</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:7.05556px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="100.21148"
+         y="53.15258"
+         id="tspan10141-5">(older)</tspan></text>
+    <circle
+       style="fill:#9141ac;stroke-width:2.53984"
+       id="path14386"
+       cx="163.94496"
+       cy="47.942337"
+       r="21" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="163.77986"
+       y="42.886574"
+       id="text8417-6-3"><tspan
+         sodipodi:role="line"
+         id="tspan8415-7-5"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:8.46667px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="163.77986"
+         y="42.886574"
+         dy="4">Update</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:7.05556px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="163.77986"
+         y="53.46991"
+         id="tspan10141-5-6">(new)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.865;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 121.7084,63.500006 c 6.44984,4.391329 13.26551,6.130442 21.16666,0"
+       id="path25490"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.865;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 121.7084,66.145839 v -2.645833 h 2.64583"
+       id="path25662" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="15.874993"
+       y="66.675003"
+       id="text35464"><tspan
+         sodipodi:role="line"
+         id="tspan35462"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Cantarell;-inkscape-font-specification:Cantarell;stroke-width:0.264583"
+         x="15.874993"
+         y="66.675003">The system is currently running with Root A,</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Cantarell;-inkscape-font-specification:Cantarell;stroke-width:0.264583"
+         x="15.874993"
+         y="72.91404"
+         id="tspan35468">so the update will copy all files from the Update</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Cantarell;-inkscape-font-specification:Cantarell;stroke-width:0.264583"
+         x="15.874993"
+         y="79.153076"
+         id="tspan35472">ISO to Root B.</tspan></text>
+    <rect
+       style="fill:#3584e4;stroke-width:1.6"
+       id="rect7122-1"
+       width="52.916668"
+       height="21.166668"
+       x="15.875"
+       y="100.54166" />
+    <rect
+       style="fill:#1c71d8;stroke-width:1.6"
+       id="rect7122-3-2"
+       width="52.916668"
+       height="21.166668"
+       x="74.083351"
+       y="100.54166" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="42.003151"
+       y="106.06924"
+       id="text8417-7"><tspan
+         sodipodi:role="line"
+         id="tspan8415-0"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:8.46667px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="42.003151"
+         y="106.06924"
+         dy="4">Root A</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:7.05556px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="42.003151"
+         y="116.65257"
+         id="tspan10141-9">(old)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="100.21149"
+       y="106.06924"
+       id="text8417-6-36"><tspan
+         sodipodi:role="line"
+         id="tspan8415-7-0"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:8.46667px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="100.21149"
+         y="106.06924"
+         dy="4">Root B*</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:7.05556px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="100.21149"
+         y="116.65257"
+         id="tspan10141-5-62">(new)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="15.875"
+       y="130.17499"
+       id="text35464-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Cantarell;-inkscape-font-specification:Cantarell;stroke-width:0.264583"
+         x="15.875"
+         y="130.17499"
+         id="tspan35472-9">The system boots with Root B this time,</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Cantarell;-inkscape-font-specification:Cantarell;stroke-width:0.264583"
+         x="15.875"
+         y="136.41403"
+         id="tspan52005">since it has a newer version of the operating system</tspan></text>
+    <rect
+       style="fill:#3584e4;stroke-width:1.6"
+       id="rect7122-1-2"
+       width="52.916668"
+       height="21.166668"
+       x="15.875"
+       y="142.875" />
+    <rect
+       style="fill:#c01c28;stroke-width:1.6"
+       id="rect7122-3-2-0"
+       width="52.916668"
+       height="21.166668"
+       x="74.083351"
+       y="142.875" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="42.003159"
+       y="148.40257"
+       id="text8417-7-2"><tspan
+         sodipodi:role="line"
+         id="tspan8415-0-3"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:8.46667px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="42.003159"
+         y="148.40257"
+         dy="4">Root A*</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:7.05556px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="42.003159"
+         y="158.98592"
+         id="tspan10141-9-7">(old)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="100.21149"
+       y="148.40257"
+       id="text8417-6-36-5"><tspan
+         sodipodi:role="line"
+         id="tspan8415-7-0-9"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:8.46667px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="100.21149"
+         y="148.40257"
+         dy="4">Root B</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:7.05556px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="100.21149"
+         y="158.98592"
+         id="tspan10141-5-62-2">(corrupt)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="15.875"
+       y="172.50833"
+       id="text35464-1-2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Cantarell;-inkscape-font-specification:Cantarell;stroke-width:0.264583"
+         x="15.875"
+         y="172.50833"
+         id="tspan52005-9">If the update failed, the system reboots to Root A,</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Cantarell;-inkscape-font-specification:Cantarell;stroke-width:0.264583"
+         x="15.875"
+         y="178.74738"
+         id="tspan59208">keeping a working operating system.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.76111px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="5.564456"
+       y="28.571716"
+       id="text40282"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:Cantarell;-inkscape-font-specification:Cantarell;stroke-width:0.264583"
+         x="5.564456"
+         y="28.571716"
+         id="tspan40284">1. Apply Update/Modification</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.76111px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="5.488956"
+       y="95.655899"
+       id="text40282-2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:Cantarell;-inkscape-font-specification:Cantarell;stroke-width:0.264583"
+         x="5.488956"
+         y="95.655899"
+         id="tspan40284-9">2. Reboot</tspan></text>
+  </g>
+</svg>
