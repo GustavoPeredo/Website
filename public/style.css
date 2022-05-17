@@ -232,7 +232,9 @@ li {
 }
 
 .box > * {
+	position: relative;
 	height: 50%;
+	top: -100%;
 }
 
 .box > img {
@@ -252,16 +254,12 @@ li {
 
  .huge-box {
 	display: block;
-	width: fit-content;
-	height: fit-content;
+	color: var(--black);
+	border-radius: 8px;
+	background: var(--color);
+	width: 100%;
 	min-height: 480px;
-	padding: 16px;
- }
-
- .huge-box:hover {
-	width: fit-content;
-	min-height: 480px;
-	height: unset;
+	margin: 16px;
  }
 
  .huge-box > img {
@@ -269,6 +267,12 @@ li {
 	position: unset;
 	left: unset;
     transform: unset;
+ }
+
+ .huge-box > div {
+	 padding: 16px;
+	 width: auto;
+	 height: auto;
  }
 
  .center {

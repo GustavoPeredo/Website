@@ -114,6 +114,7 @@ export default function Page(props) {
 		{props.postsMap.map(postMap => 
 			<Link href={`/${props.category}/` + postMap.post}><a>
 			<div className={'box ' + postMap.color}>
+				<div className="box-inner"/>
 				<img loading="lazy" src={postMap.banner}/>
 				<div>
 					<h3>{postMap.name}</h3>

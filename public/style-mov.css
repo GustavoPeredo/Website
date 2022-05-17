@@ -5,7 +5,30 @@
 .box {
 	box-shadow:
 		7px 7px 14px var(--dark-color),
-		-7px -7px 14px var(--light-color);	
+		-7px -7px 14px var(--light-color);
+	
+}
+
+.box-inner {
+	border-radius: 8px;
+	position: relative;
+	top: 0px;
+	width: inherit;
+	height: inherit;
+	z-index: 1000;
+	background: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+	transition: all 0.5s;
+}
+
+.box-inner:hover {
+	transition: all 0.5s;
+}
+
+.huge-box {
+	box-shadow:
+		7px 7px 14px var(--dark-color),
+		-7px -7px 14px var(--light-color);
+	
 }
 
 main > div {

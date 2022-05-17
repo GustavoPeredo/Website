@@ -29,7 +29,7 @@ export default function Home(props) {
 		<title>Gustavo Machado Peredo</title>
 	</Head>
 	<div id="main-text">
-        	<h1 className={props.bg_color}>
+        	<h1>
           		Gustavo Machado Peredo
         	</h1>
 	  	<h4>
@@ -49,7 +49,8 @@ function AboutMe(props) {
 		<h2>
 			About me
 		</h2>
-		<div className={"box huge-box " + props.bg_color}>
+		<div className={"huge-box " + props.bg_color}>
+			<div className="box-inner">
 			<img src='/images/me.png' className="center" style={{width: "196px"}}/>
 			<h2>Interests</h2>
 
@@ -131,6 +132,7 @@ function AboutMe(props) {
 			<li>Global Issues Network Brazil-Colombia Video Project Manager (2019)</li>
 			<li>Volunteer as English teacher at Sociedade Crescer (2019)</li>
 			<li>Font Downloader is part of the GNOME Circle initiative (2020)</li>
+		</div>
 		</div>
 	</>
 }
