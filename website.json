@@ -9,6 +9,7 @@
         "font-catcher": "orange",
         "font-downloader": "green",
         "re-fitting-everything-together": "gray",
-        "atom-os": "gray"
+        "atomos": "gray",
+        "atomos-v2": "gray"
     }
 }

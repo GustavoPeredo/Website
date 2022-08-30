@@ -2,23 +2,36 @@
 <p><em>A command line font package manager.</em></p>
 <h2 id="installation">Installation</h2>
 <h3 id="dependencies">Dependencies</h3>
-<p>Font Catcher relies on <code>curl</code> to download fonts, make sure to install it before using Font Catcher.</p>
+<p>Font Catcher relies on <code>curl</code> to download fonts, make sure
+to install it before using Font Catcher.</p>
 <h3 id="recommended">Recommended</h3>
 <p>Download one of the following:</p>
-<p><a href="https://github.com/GustavoPeredo/Font-Catcher/releases/download/v1.0.1/font-catcher.zip">Standard repo</a></p>
-<p><a href="https://github.com/GustavoPeredo/Font-Catcher/releases/download/v1.0.1/font-catcher.g.zip">Standard repo + Google Fonts (Recommended)</a></p>
+<p><a
+href="https://github.com/GustavoPeredo/Font-Catcher/releases/download/v1.0.1/font-catcher.zip">Standard
+repo</a></p>
+<p><a
+href="https://github.com/GustavoPeredo/Font-Catcher/releases/download/v1.0.1/font-catcher.g.zip">Standard
+repo + Google Fonts (Recommended)</a></p>
 <p>Extract and copy to <code>/usr/bin</code>! That’s it!</p>
 <h3 id="using-cargo">Using Cargo</h3>
 <p>To install using the standard repo, run:</p>
 <pre><code>cargo install font-catcher</code></pre>
 <p>To install with Google Fonts:</p>
 <ol type="1">
-<li><p>Grab an API Key on <a href="https://developers.google.com/fonts/docs/developer_api">Google Font’s Website</a></p></li>
+<li><p>Grab an API Key on <a
+href="https://developers.google.com/fonts/docs/developer_api">Google
+Font’s Website</a></p></li>
 <li><p>Run:</p></li>
 </ol>
 <pre><code>GOOGLE_FONTS_KEY=&quot;YOUR API KEY HERE&quot; cargo install font-catcher --features google_repo</code></pre>
 <h1 id="usage">Usage</h1>
-<p>Font Catcher’s commands are aimed at being easy and intuitive to use. If you have used <code>apt</code> or <code>dnf</code> as package managers once, you will notice the similarities. By default, Font Catcher comes with one repository which is currently WIP: <a href="https://github.com/GustavoPeredo/open-font-repository">Open Font Repository</a>, but it is possible to use Google Fonts as a repository as well (and other repositories).</p>
+<p>Font Catcher’s commands are aimed at being easy and intuitive to use.
+If you have used <code>apt</code> or <code>dnf</code> as package
+managers once, you will notice the similarities. By default, Font
+Catcher comes with one repository which is currently WIP: <a
+href="https://github.com/GustavoPeredo/open-font-repository">Open Font
+Repository</a>, but it is possible to use Google Fonts as a repository
+as well (and other repositories).</p>
 <p>To search for a font:</p>
 <pre><code>font-catcher search font-name</code></pre>
 <p>To install a font:</p>
@@ -27,36 +40,45 @@
 <pre><code>font-catcher remove font-name</code></pre>
 <p>That’s it! (For the most part)</p>
 <h2 id="further-usage">Further Usage</h2>
-<p>You can download fonts to a specific directory instead of installing them directly:</p>
+<p>You can download fonts to a specific directory instead of installing
+them directly:</p>
 <pre><code>font-catcher download /desired/path Agave</code></pre>
-<p>You can specify which repository to search, install and download fonts from by passing the <code>--repo</code> flag before the fonts:</p>
+<p>You can specify which repository to search, install and download
+fonts from by passing the <code>--repo</code> flag before the fonts:</p>
 <p>Example:</p>
 <pre><code>font-catcher install --repo &quot;Google Fonts&quot; Roboto
 
 font-catcher search --repo &quot;Open Font Repository&quot; Aga
 
 font-catcher download ~/Downloads --repo &quot;Open Font Repository&quot; Agave</code></pre>
-<p>It’s possible to install, download and remove multiple fonts at once:</p>
+<p>It’s possible to install, download and remove multiple fonts at
+once:</p>
 <pre><code>font-catcher install font1 font2 font3
 
 font-catcher remove font1 font2 font3</code></pre>
 <p>To update the font catalogs to the latest versions, run:</p>
 <pre><code>font-catcher update-repos</code></pre>
 <h2 id="adding-repositories">Adding repositories</h2>
-<h3 id="editing-the-repos.conf-file">Editing the <code>repos.conf</code> file</h3>
-<p>The simples way to add another repo is by editing the <code>repos.conf</code> file, located under your data file inside a font-catcher folder (normally <code>~/.local/share/font-catcher</code>). If the file doesn’t exist, create a new one.</p>
+<h3 id="editing-the-repos.conf-file">Editing the <code>repos.conf</code>
+file</h3>
+<p>The simples way to add another repo is by editing the
+<code>repos.conf</code> file, located under your data file inside a
+font-catcher folder (normally <code>~/.local/share/font-catcher</code>).
+If the file doesn’t exist, create a new one.</p>
 <p>This is a template for a repository:</p>
 <pre><code>[[repo]]
 name = &quot;Open Font Repository Local&quot;
 url = &quot;https://raw.githubusercontent.com/GustavoPeredo/open-font-repository/main/fonts.json&quot;
 </code></pre>
-<p>If your repository has an API key, add <code>{API_KEY}</code> where the API key should be placed in the url, example:</p>
+<p>If your repository has an API key, add <code>{API_KEY}</code> where
+the API key should be placed in the url, example:</p>
 <pre><code>[[repo]]
 name = &quot;Google Fonts Local&quot;
 url = &quot;https://www.googleapis.com/webfonts/v1/webfonts?key={API_KEY}&quot;
 key = &quot;KEY&quot;
 </code></pre>
-<p>You can add as many repositories as you want, just append them to the file like so:</p>
+<p>You can add as many repositories as you want, just append them to the
+file like so:</p>
 <pre><code>[[repo]]
 name = &quot;Open Font Repository Local&quot;
 url = &quot;https://raw.githubusercontent.com/GustavoPeredo/open-font-repository/main/fonts.json&quot;
@@ -66,22 +88,27 @@ name = &quot;Google Fonts Local&quot;
 url = &quot;https://www.googleapis.com/webfonts/v1/webfonts?key={API_KEY}&quot;
 key = &quot;KEY&quot;</code></pre>
 <h3 id="adding-to-the-source-code">Adding to the source code</h3>
-<p>To add a repository to the source code, try following the example present in <code>src/repo.rs</code>:</p>
+<p>To add a repository to the source code, try following the example
+present in <code>src/repo.rs</code>:</p>
 <pre><code>Repository {
                 name: &quot;Open Font Repository&quot;.to_string(),
                 url: &quot;https://raw.githubusercontent.com/GustavoPeredo/open-font-repository/main/fonts.json&quot;.to_string(),
                 key: None,
             }</code></pre>
-<p>Maybe there are other font repositories compatible with this software that I’m unaware of, it would be nice to have them as options at compilation time!</p>
+<p>Maybe there are other font repositories compatible with this software
+that I’m unaware of, it would be nice to have them as options at
+compilation time!</p>
 <h1 id="to-improve">To-improve!</h1>
 <ul>
 <li><ol start="4" type="A">
 <li>Develop an update system for fonts</li>
 </ol></li>
 <li><ol type="A">
-<li>Show installed fonts as <code>[installed]</code> or <code>[system installed]</code></li>
+<li>Show installed fonts as <code>[installed]</code> or
+<code>[system installed]</code></li>
 </ol></li>
-<li>(C) Make <code>Open Font Repository</code> optional at compile time, but still default.</li>
+<li>(C) Make <code>Open Font Repository</code> optional at compile time,
+but still default.</li>
 <li><ol type="A">
 <li>Allow to filter fonts by subsets, categories and lastModified</li>
 </ol></li>

@@ -76,7 +76,7 @@ I think ParticleOS sets the bar for what a modern Linux distribution could aim f
 the focus on security complicates customization.
 
 Inspired by his blog post, I'll be posting my own version of "Fitting Everything Together".
-Check it out [>here<](/blog/atom-os).
+Check it out [>here<](/blog/atomos).
 
 -----------
 

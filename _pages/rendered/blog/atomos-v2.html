@@ -1,0 +1,125 @@
+<h1 id="atomos-and-the-future">AtomOS and the future</h1>
+<p>This will probably be my final post on the series about AtomOS. This
+project took too much time out of me, but was also a grateful learning
+experience.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Check the <a href="/blog/atomos">previous post</a> for the my
+original plan for AtomOS and the <a
+href="/blog/re-fitting-everything-together">reasons behind it</a>.</p>
+<h2 id="problems-with-the-original-plan">Problems with the original
+plan</h2>
+<p>There is a huge problem in my approach towards AtomOS, it deviates
+and ignores many issues raise by Mr. Poettering. I’ll try to explain why
+I think this is the case.</p>
+<h3 id="the-lack-of-secure-boot">The lack of secure boot</h3>
+<p>This is the most aggravating issue with my approach. The whole point
+of having a trustchain is to ensure that the system is not tampered,
+therefore by simply using as a base an OS without secure boot support,
+the whole design was broken from the start.</p>
+<h4 id="why-not-sign-the-yourself">Why not sign the yourself?</h4>
+<p>This is a valid question, but it’s not as simple as it seems. The
+problem is that the kernel is not the only thing that needs to be
+signed, but also the bootloader, the initramfs, and the rootfs. The
+process of signing all of these is not trivial and would be a
+requirement for every individual user.</p>
+<h3 id="alpine-as-a-base">Alpine as a base</h3>
+<p>Alpine is a very useful distribution, but it is not a good base for
+AtomOS. The main reason is of secure boot as already mentioned, but a
+second reason is that it is not a very user friendly distribution.
+Currently there are many workaround required to make modern Linux
+technologies to work (such as pipewire, wayland, etc).</p>
+<h3 id="root-tamperability">Root tamperability</h3>
+<p>Since the root was not signed, it is possible to tamper with it. This
+is a very big problem, and it is not something that can be solve with
+verity-dm, but that was lacking on the original design.</p>
+<p>(What’s the point of a secure bootloader if the root was
+tampered?)</p>
+<h2 id="an-alternative-approach">An alternative approach</h2>
+<p>The new approach for AtomOS was then to keep the pros from
+before:</p>
+<ul>
+<li>Updates should be reversable (as well as factory reset).</li>
+<li>The distribution should be remixable, allowing users and companies
+to remix it as they so wish.</li>
+<li>All software in it should just work.</li>
+<li>Shouldn’t get in the way of the user.</li>
+</ul>
+<p>As well as fixint the above: * Lack of secure boot * Alpine as a base
+* Root tamperability</p>
+<h3 id="the-utopia">The Utopia</h3>
+<p>The design of an utopic AtomOS is as follow: * Nix and a EFI
+bootloader are the only software that are signed. * The root system is
+encrypted with the administrator’s password and a TPM key. * The root
+system runs on tmpfs (RAM). * All configurations are managed by nix. *
+User files are all encrypted using systemd-homed. * A single CD is both
+the installation media and the distribution.</p>
+<p>The installation process of such distribution is as follow: 1. The CD
+is an encrypted distribution with a generic password that is
+automatically decrypted.</p>
+<ol start="2" type="1">
+<li><p>A configuration file says that by default, if booting from a USB,
+the system should boot into an installation environment.</p></li>
+<li><p>The system dd’s the USB drive to the user’s disk.</p></li>
+<li><p>If booting from EFI, the system enrolls the TPM key as the
+system’s root key. If not, it keeps the generic password.</p></li>
+<li><p>Upon reboot, use systemd-repart to resize the root and home
+partitions to fill the disk.</p></li>
+<li><p>The user is prompted for account creation and password, removing
+the generic password and enrolling the user’s password as the root key
+(if administrator).</p></li>
+</ol>
+<p>The boot process of such distribution is as follow: 1. The system
+boots into the signed EFI bootloader or to a bootloader on old
+architectures.</p>
+<ol start="2" type="1">
+<li><p>The bootloader decrypts the root system with the TPM key or the
+user’s password.</p></li>
+<li><p>The initramfs runs nix store verify to verify the integrity of
+the root system.</p></li>
+<li><p>The initramfs mounts the root system on tmpfs.</p></li>
+<li><p>The initramfs starts systemd.</p></li>
+<li><p>Creates zram devices, so memory is not a problem.</p></li>
+</ol>
+<p>Assuming the user has a TPM, the system is now secure. The root
+system is encrypted with a key that is only known to the user and the
+TPM. The root system is also verified by nix store verify, which ensures
+that the root system was not tampered while decrypted.</p>
+<p>Factory reset can be achieved by simply running
+<code>nixos-rebuild switch --rollback 1</code> or by modifying
+/etc/nixos/configuration.nix and running
+<code>nixos-rebuild switch</code> and removing the other keys from the
+disk encryption.</p>
+<p>The system uses grub as a bootloader to achive <a
+href="https://en.wikipedia.org/wiki/Full_disk_encryption">FDE</a>.</p>
+<h3 id="the-reality">The reality</h3>
+<p><a href="https://github.com/NixOS/nixpkgs/issues/42127">NixOS doesn’t
+support secure boot</a>, though there are <a
+href="https://github.com/NixOS/nixpkgs/issues/156270">proposed
+solutions</a>.</p>
+<p>NixOS is also missing proper systemd-homed and systemd-parted.</p>
+<p>Booting to RAM is not as important as the rest of the features so
+that could be dropped for a first version.</p>
+<p>Although nix is cool, it is not a requirement for the system to work,
+so it could be dropped for a first version. Furthermore it <a
+href="https://gist.github.com/matthewpi/08c3d652e7879e4c4c30bead7021ff73">requires
+extra work in Fedora Silverblue</a>.</p>
+<p>So instead of using NixOS, Fedora Silverblue would be used as a base,
+it doesn’t provide much customization, but it allows rollbacks and
+factory resets.</p>
+<h4 id="the-limitations">The limitations</h4>
+<p>It was possible to use systemd-parted to partition the disk
+automatically.</p>
+<p>Systemd-homed seems to work, but it couldn’t be used with GDM or
+SDDM.</p>
+<p>For some reason Anaconda (Fedora’s Installer) didn’t allow an
+encrypted /boot partition, although it should be possible to do it.</p>
+<h2 id="the-end">The end</h2>
+<p>Finally, AtomOS will just be a dream. I’m putting this project to
+rest after how hard it was to make the nescessary changes to make it
+work. There are some final questions I’d like to raise after this:</p>
+<p>Instead of having a signed dm-verity verified root, isn’t it possible
+to simply encrypt the disk with a password and use a TPM key to decrypt
+it?</p>
+<p>Why isn’t running the root or /usr/ in a tmpfs more common?</p>
+<p>Are there more people working on creating good, secure and reliable
+Linux distributions?</p>

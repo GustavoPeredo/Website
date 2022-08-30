@@ -1,22 +1,63 @@
-<h1 id="what-why-and-how-to-nix-and-flatpak">What, Why and How to Nix and Flatpak</h1>
-<p>Flatpak and Nix are two very distinct technologies, but both can be seen as post-modern package managers, in this blog post I’ll write what these two technologies are, why they are important for different uses and how to get involved with it. This is a developer focused article, so much of the language used will be targeted at developers.</p>
-<p>*<a href="https://gist.github.com/bureado/792037b71229db3c37975e70e8a9c54a">post-modern</a></p>
+<h1 id="what-why-and-how-to-nix-and-flatpak">What, Why and How to Nix
+and Flatpak</h1>
+<p>Flatpak and Nix are two very distinct technologies, but both can be
+seen as post-modern package managers, in this blog post I’ll write what
+these two technologies are, why they are important for different uses
+and how to get involved with it. This is a developer focused article, so
+much of the language used will be targeted at developers.</p>
+<p>*<a
+href="https://gist.github.com/bureado/792037b71229db3c37975e70e8a9c54a">post-modern</a></p>
 <h2 id="what">What</h2>
 <h3 id="nix">Nix</h3>
 <p>Nix is a technology made of a language, package manager and … .</p>
-<p>The nix language can be compared to .spec and PKGBUILD files with one key difference: it is much more powerful! Instead of simply giving build and install instructions, the nix language allows the community to develop extensions/libraries for the language (see <a href="https://github.com/numtide/flake-utils">flake-utils</a>), forks to reuse packaging instructions from main packages (see <a href="https://github.com/NixOS/nixpkgs/tree/master/pkgs/applications/networking/browsers/firefox/librewolf">librewolf packaging</a>), modifying software (see <a href="https://nixos.org/guides/nix-pills/nixpkgs-overriding-packages.html">overrides</a> and much more that I might not know.</p>
-<p>The nix package manager is a lot like rust’s <a href="https://doc.rust-lang.org/cargo/getting-started/first-steps.html">cargo</a> and javascript’s <a href="https://www.npmjs.com/">npm</a>, with one key difference: It is much more powerful! The nix package manager doesn’t manage programs written in nix, instead it manages any program that has been packaged with it, they can be written in python, C, rust, bash and/or any other language. Furthermore, with <a href="https://nixos.wiki/wiki/Flakes">flakes</a> it will be able to manage even non-nix “packages”.</p>
+<p>The nix language can be compared to .spec and PKGBUILD files with one
+key difference: it is much more powerful! Instead of simply giving build
+and install instructions, the nix language allows the community to
+develop extensions/libraries for the language (see <a
+href="https://github.com/numtide/flake-utils">flake-utils</a>), forks to
+reuse packaging instructions from main packages (see <a
+href="https://github.com/NixOS/nixpkgs/tree/master/pkgs/applications/networking/browsers/firefox/librewolf">librewolf
+packaging</a>), modifying software (see <a
+href="https://nixos.org/guides/nix-pills/nixpkgs-overriding-packages.html">overrides</a>
+and much more that I might not know.</p>
+<p>The nix package manager is a lot like rust’s <a
+href="https://doc.rust-lang.org/cargo/getting-started/first-steps.html">cargo</a>
+and javascript’s <a href="https://www.npmjs.com/">npm</a>, with one key
+difference: It is much more powerful! The nix package manager doesn’t
+manage programs written in nix, instead it manages any program that has
+been packaged with it, they can be written in python, C, rust, bash
+and/or any other language. Furthermore, with <a
+href="https://nixos.wiki/wiki/Flakes">flakes</a> it will be able to
+manage even non-nix “packages”.</p>
 <h3 id="flatpak">Flatpak</h3>
 <figure>
-<img src="/images/flattruck.png" alt="image from flatpak.org" /><figcaption aria-hidden="true">image from flatpak.org</figcaption>
+<img src="/images/flattruck.png" alt="image from flatpak.org" />
+<figcaption aria-hidden="true">image from flatpak.org</figcaption>
 </figure>
-<p>Flatpak, from the <a href="https://docs.flatpak.org/en/latest/introduction.html">docs</a>, is “<em>a system for building, distributing, and running sandboxed desktop applications on Linux.</em>”. The way this is done is by having two sets of tools, namely: flatpak-builder (to package programs) and flatpak (to manage packages), one for packagers, the other for users.</p>
+<p>Flatpak, from the <a
+href="https://docs.flatpak.org/en/latest/introduction.html">docs</a>, is
+“<em>a system for building, distributing, and running sandboxed desktop
+applications on Linux.</em>”. The way this is done is by having two sets
+of tools, namely: flatpak-builder (to package programs) and flatpak (to
+manage packages), one for packagers, the other for users.</p>
 <h2 id="why">Why</h2>
-<p>When talking about “post-modern” package managers, many have the concern that this they are an over-complication from the traditional packaging systems (normally accompanied by <a href="https://xkcd.com/927/">this comic XD</a>), however this not true, in the following sections I’ll explain when and why to use Nix or Flatpak.</p>
+<p>When talking about “post-modern” package managers, many have the
+concern that this they are an over-complication from the traditional
+packaging systems (normally accompanied by <a
+href="https://xkcd.com/927/">this comic XD</a>), however this not true,
+in the following sections I’ll explain when and why to use Nix or
+Flatpak.</p>
 <h3 id="nix-1">Nix</h3>
-<h4 id="as-a-project-dependency-manager">As a project dependency manager</h4>
-<p>One of the best things about nix is how it can be used as a package manager for single projects. Long gone are the days of wasting time looking for dependencies only to be greeted with a “requires version x or newer” error message, now you can write a shell.nix, default.nix or flake.nix file and have nix handle all dependencies for you and contributors to your project!</p>
-<p>Also, it’s very simple to write a shell.nix file (to get started with nix), see the example below:</p>
+<h4 id="as-a-project-dependency-manager">As a project dependency
+manager</h4>
+<p>One of the best things about nix is how it can be used as a package
+manager for single projects. Long gone are the days of wasting time
+looking for dependencies only to be greeted with a “requires version x
+or newer” error message, now you can write a shell.nix, default.nix or
+flake.nix file and have nix handle all dependencies for you and
+contributors to your project!</p>
+<p>Also, it’s very simple to write a shell.nix file (to get started with
+nix), see the example below:</p>
 <pre><code>{ pkgs ? import &lt;nixpkgs&gt; {} }:
   pkgs.mkShell {
     nativeBuildInputs = with pkgs; [ 
@@ -26,40 +67,107 @@
       gnused
     ];
 }</code></pre>
-<p>This is the shell.nix file for this website, what it does is: open a shell where nodejs, pandoc, parallel and sed are installed. In this example there is no version fixing (for good reason, it’s not needed ;) ).</p>
-<p>This was very useful to setup a similar development environment across developers in a startup I’ve been working with. Me and one other developer were having trouble running a part of the code written by yet another developer, in my system (Ubuntu 20.04) nodejs was too old and on his system nodejs was too recent, there were also problems setting up pip-env on this project as well; the solution? <a href="https://nixos.wiki/wiki/Python#Emulating_virtualenv_with_nix-shell">A nix-shell that installed a specific nodejs version and python dependencies</a>!</p>
-<h4 id="as-a-cli-user-package-manager">As a cli user package manager</h4>
-<p>Nix is an ideal way to install system- or user-wide command-line applications. There are three things that nix has that can be very useful for command-line applications (and therefore users): 1. Modification of packages 2. Ease of redistribution 3. Multiple versions of the same package installed simultaneously</p>
-<p>Modification of packages. <a href="https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789">Dotfiles</a> have been the way most software allows modifications, there are <a href="https://suckless.org/hacking/">exceptions</a>, regardless nix allows these customisations to be done in different ways: <a href="https://nixos.wiki/wiki/Module">modules</a> (which are options that the packager exposes to the user) and <a href="https://nixos.org/guides/nix-pills/nixpkgs-overriding-packages.html">overrides</a> (which overrides how the package was packaged initially).</p>
-<p>Ease of redistribution. This is useful for both distro hoppers that want to keep their configurations across systems and people that have really cool <a href="https://github.com/skwp/dotfiles">configurations</a> and want to share with others. What is of use knowledge/art if it’s not shared?</p>
-<p>Multiple versions of the same package. Maybe you want to test someone’s configuration, or edit your own vim configuration without breaking your current editor (vim), this is where multiple versions of the same package are very useful! You can have your current vim configuration aliased to <code>vim</code> and your testing configuration to <code>asdf-vim</code> or similar.</p>
-<p>This has become easier and easier with <a href="https://github.com/nix-community/home-manager">home-manager</a> allowing you to configure dotfiles even from non-nix programs, furthermore it’s easy to install! See how I install <a href="https://github.com/GustavoPeredo/nix-home-manager-config">mine</a>:</p>
+<p>This is the shell.nix file for this website, what it does is: open a
+shell where nodejs, pandoc, parallel and sed are installed. In this
+example there is no version fixing (for good reason, it’s not needed ;)
+).</p>
+<p>This was very useful to setup a similar development environment
+across developers in a startup I’ve been working with. Me and one other
+developer were having trouble running a part of the code written by yet
+another developer, in my system (Ubuntu 20.04) nodejs was too old and on
+his system nodejs was too recent, there were also problems setting up
+pip-env on this project as well; the solution? <a
+href="https://nixos.wiki/wiki/Python#Emulating_virtualenv_with_nix-shell">A
+nix-shell that installed a specific nodejs version and python
+dependencies</a>!</p>
+<h4 id="as-a-cli-user-package-manager">As a cli user package
+manager</h4>
+<p>Nix is an ideal way to install system- or user-wide command-line
+applications. There are three things that nix has that can be very
+useful for command-line applications (and therefore users): 1.
+Modification of packages 2. Ease of redistribution 3. Multiple versions
+of the same package installed simultaneously</p>
+<p>Modification of packages. <a
+href="https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789">Dotfiles</a>
+have been the way most software allows modifications, there are <a
+href="https://suckless.org/hacking/">exceptions</a>, regardless nix
+allows these customisations to be done in different ways: <a
+href="https://nixos.wiki/wiki/Module">modules</a> (which are options
+that the packager exposes to the user) and <a
+href="https://nixos.org/guides/nix-pills/nixpkgs-overriding-packages.html">overrides</a>
+(which overrides how the package was packaged initially).</p>
+<p>Ease of redistribution. This is useful for both distro hoppers that
+want to keep their configurations across systems and people that have
+really cool <a
+href="https://github.com/skwp/dotfiles">configurations</a> and want to
+share with others. What is of use knowledge/art if it’s not shared?</p>
+<p>Multiple versions of the same package. Maybe you want to test
+someone’s configuration, or edit your own vim configuration without
+breaking your current editor (vim), this is where multiple versions of
+the same package are very useful! You can have your current vim
+configuration aliased to <code>vim</code> and your testing configuration
+to <code>asdf-vim</code> or similar.</p>
+<p>This has become easier and easier with <a
+href="https://github.com/nix-community/home-manager">home-manager</a>
+allowing you to configure dotfiles even from non-nix programs,
+furthermore it’s easy to install! See how I install <a
+href="https://github.com/GustavoPeredo/nix-home-manager-config">mine</a>:</p>
 <pre><code>nix build --no-link github:GustavoPeredo/nix-home-manager-config#homeConfigurations.gustavo.activationPackage</code></pre>
 <pre><code>&quot;$(nix path-info github:GustavoPeredo/nix-home-manager-config#homeConfigurations.gustavo.activationPackage)&quot;/activate</code></pre>
 <p>done.</p>
 <h3 id="flatpak-1">Flatpak</h3>
-<h4 id="code-once-distribute-everywhere">Code once, distribute everywhere</h4>
-<p>This is the key difference of flatpak, it allows the developer to develop once and distribute the app everywhere with certainty that it will work the same on every other computer. That’s it, this allows more focus and contribution to development rather than to packaging/solving distro specific bugs.</p>
-<h2 id="how-to-get-started-with-nix-andor-flatpak">How to get started with nix and/or flatpak</h2>
+<h4 id="code-once-distribute-everywhere">Code once, distribute
+everywhere</h4>
+<p>This is the key difference of flatpak, it allows the developer to
+develop once and distribute the app everywhere with certainty that it
+will work the same on every other computer. That’s it, this allows more
+focus and contribution to development rather than to packaging/solving
+distro specific bugs.</p>
+<h2 id="how-to-get-started-with-nix-andor-flatpak">How to get started
+with nix and/or flatpak</h2>
 <h3 id="nix-2">Nix</h3>
-<p>The best way to start learning Nix is by tinkering (imo), a good start would be by installing NixOS in a virtual machine or by tinkering with other people’s flakes. Useful places to find information are the official docs and wiki: * <a href="https://nixos.org/manual/nix/stable/">Nix manual</a> * <a href="https://nixos.org/manual/nixpkgs/stable/">Nixpkgs manual</a> * <a href="https://nixos.wiki/wiki/">Nix Wiki</a> That said, you may find the documentation a bit lacking (a problem also expressed in this <a href="https://www.youtube.com/watch?v=qjq2wVEpSsA">talk</a>), so I also suggest taking a look at: * <a href="https://github.com/NixOS/nixpkgs/tree/master/pkgs/">Nixpkgs git (a lot of packaging examples)</a> * <a href="https://github.com/notusknot/dotfiles-nix">Other people configurations</a></p>
+<p>The best way to start learning Nix is by tinkering (imo), a good
+start would be by installing NixOS in a virtual machine or by tinkering
+with other people’s flakes. Useful places to find information are the
+official docs and wiki: * <a
+href="https://nixos.org/manual/nix/stable/">Nix manual</a> * <a
+href="https://nixos.org/manual/nixpkgs/stable/">Nixpkgs manual</a> * <a
+href="https://nixos.wiki/wiki/">Nix Wiki</a> That said, you may find the
+documentation a bit lacking (a problem also expressed in this <a
+href="https://www.youtube.com/watch?v=qjq2wVEpSsA">talk</a>), so I also
+suggest taking a look at: * <a
+href="https://github.com/NixOS/nixpkgs/tree/master/pkgs/">Nixpkgs git (a
+lot of packaging examples)</a> * <a
+href="https://github.com/notusknot/dotfiles-nix">Other people
+configurations</a></p>
 <h3 id="flatpak-2">Flatpak</h3>
-<p>The flatpak docs are simple and clear: * <a href="https://docs.flatpak.org/en/latest/getting-started.html">Getting Started Flatpak</a> And this video by Egee is simply chef’s kiss: * <a href="https://www.youtube.com/watch?v=DuVfDQUdLWU">How to create Flatpaks with Gnome Builder IDE on Manjaro</a></p>
+<p>The flatpak docs are simple and clear: * <a
+href="https://docs.flatpak.org/en/latest/getting-started.html">Getting
+Started Flatpak</a> And this video by Egee is simply chef’s kiss: * <a
+href="https://www.youtube.com/watch?v=DuVfDQUdLWU">How to create
+Flatpaks with Gnome Builder IDE on Manjaro</a></p>
 <h2 id="bonus">Bonus</h2>
 <h3 id="further-reading">Further Reading</h3>
 <ul>
 <li>Nix
 <ul>
-<li><a href="https://nixos.org/guides/how-nix-works.html">How nix works</a></li>
-<li><a href="https://github.com/nix-community/nix-user-chroot">Install nix in immutable linux systems</a></li>
+<li><a href="https://nixos.org/guides/how-nix-works.html">How nix
+works</a></li>
+<li><a href="https://github.com/nix-community/nix-user-chroot">Install
+nix in immutable linux systems</a></li>
 </ul></li>
 <li>Flatpak
 <ul>
-<li><a href="https://flatkill.org/">Flatkill (famous website agains flatpaks)</a></li>
-<li><a href="https://theevilskeleton.gitlab.io/2021/02/11/response-to-flatkill-org.html">Response to Flatkill (the other side of the argument)</a></li>
+<li><a href="https://flatkill.org/">Flatkill (famous website agains
+flatpaks)</a></li>
+<li><a
+href="https://theevilskeleton.gitlab.io/2021/02/11/response-to-flatkill-org.html">Response
+to Flatkill (the other side of the argument)</a></li>
 </ul></li>
 </ul>
-<h3 id="suggestions-comments-improvements">Suggestions? Comments? Improvements?</h3>
-<p>Feel free to e-mail me! Or to open a pull request on <a href="https://github.com/GustavoPeredo/Website%22">github</a></p>
+<h3 id="suggestions-comments-improvements">Suggestions? Comments?
+Improvements?</h3>
+<p>Feel free to e-mail me! Or to open a pull request on <a
+href="https://github.com/GustavoPeredo/Website%22">github</a></p>
 <hr />
 <p>This got very dense, so I might do a video about it.</p>
