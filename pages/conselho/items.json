@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Potion",
+        "description": "A potion that heals 1d4 hit points",
+        "price": 30
+    },
+    {
+        "name": "Dust",
+        "description": "Variety",
+        "price": 15
+    },
+    {
+        "name": "Sword",
+        "description": "A sword that add +1 STR",
+        "price": 100
+    },
+    {
+        "name": "Shield",
+        "description": "A shield that add +1 END",
+        "price": 100
+    },
+    {
+        "name": "Amulet",
+        "description": "A armor that add +1 END +1 DIS",
+        "price": 150
+    }
+]

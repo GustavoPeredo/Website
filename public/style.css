@@ -170,7 +170,8 @@ code {
 }
 
 body {
-	background-image: var(--wallaper);
+	/*background-image: var(--wallaper);*/
+	background-color: #e0e0e0;
 	overflow-x: hidden;
 	margin: 0px;
 	padding: 0px;

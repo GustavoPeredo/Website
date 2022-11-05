@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Reach",
+        "effect": "Melee Weapon Attacks can be made at Close Range."
+    },
+    {
+        "name": "Returning",
+        "effect": "Thrown Melee Weapon Attacks can be made up to Medium Range and will return to the character’s hand."
+    },
+    {
+        "name": "Shield",
+        "effect": "Make DIS+PER Defensive Checks without Dust or consuming Capacity."
+    },
+    {
+        "name": "Silent",
+        "effect": "Unaware targets at Medium Range or farther do not notice missed Ranged Attacks."
+    },
+    {
+        "name": "Spread",
+        "effect": "When making a Ranged Attack against a target, enemies Adjacent to the target take Splash Damage."
+    },
+    {
+        "name": "Toughness",
+        "effect": "Increase Health by 1."
+    },
+    {
+        "name": "Hooked-Ranged",
+        "effect": "Consume one Capacity to grapple targets up to Medium Range."
+    },
+    {
+        "name": "Martial Arts",
+        "effect": "Roll STR+PER for Unarmed Attack Accuracy."
+    },
+    {
+        "name": "Mixed Capacity",
+        "effect": "Declare an additional color of Dust during a Reload. All Dust Checks can use either of the two declared colors but never both at the same time. Special: Characters can select this Specialization multiple times, gaining an additional color that may be declared during a Reload."
+    },
+    {
+        "name": "Mobility",
+        "effect": "The character can move once without consuming an Action during their Action Sequence. They can also Capacity Boost their movement Action to move vertically."
+    },
+    {
+        "name": "Over-Sized",
+        "effect": "Enemies Adjacent to the target of a Melee Attack take Splash Damage."
+    },
+    {
+        "name": "Form Focus",
+        "effect": "Select two colors of Dust. The character gains access to either the Crystal or Round effect of those two colors when they reload but no other forms of those colors."
+    },
+    {
+        "name": "Hands-Free",
+        "effect": "A weapon can be used without holding it."
+    },
+    {
+        "name": "High-Caliber",
+        "effect": "The character can now Capacity Boost their Ranged Attack to gain +1 Accuracy."
+    },
+    {
+        "name": "High-Capacity",
+        "effect": "Increase Capacity by 5. Completely refilling the character’s Capacity is a Major Action."
+    },
+    {
+        "name": "Hooked-Melee",
+        "effect": "Use Melee Attack Attributes for all Grapple Checks."
+    },
+    {
+        "name": "Additional Weapon",
+        "effect": "After a character makes an Attack, they may make an additional Attack without using up an Action during the Action Sequence. These additional Attacks add STR to Melee Attacks and AGI to Ranged Attacks, but no secondary Attributes for Accuracy. These Attacks do not add any Attributes to Damage."
+    },
+    {
+        "name": "Alternate Form",
+        "effect": "The character selects an additional Melee or Ranged Style for their base weapon. When using this alternate form, they receive a bonus to Damage equal to the Accuracy penalty compared to their primary weapon form."
+    },
+    {
+        "name": "Camouflage",
+        "effect": "Characters can roll Stealth (AGI+DIS) as an Initiative roll."
+    },
+    {
+        "name": "Defender",
+        "effect": "Roll Resist, Semblance, or Dust Defensive Checks against Attacks targeting Adjacent allies."
+    },
+    {
+        "name": "Energy Conservation",
+        "effect": "Ranged Attacks consume 1 less Capacity."
+    }
+]

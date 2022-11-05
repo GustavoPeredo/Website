@@ -1,0 +1,30 @@
+[
+    {
+        "name": "DOOG",
+        "description": "Deal 50 (+30 each ROC) of damage in one turn"
+    },
+    {
+        "name": "The Altruist",
+        "description": "Heal allies more than they heal you"
+    },
+    {
+        "name": "Come back here!",
+        "description": "Group control 10 enemies in one battle"
+    },
+    {
+        "name": "Thirsty for blood",
+        "description": "Get first blood 2 times"
+    },
+    {
+        "name": "My precious",
+        "description": "Leave 1 single breakable on the room"
+    },
+    {
+        "name": "HAGAKURE!",
+        "description": "Kill using hagakure"
+    },
+    {
+        "name": "Greed goblin",
+        "description": "Get the most gold in one battle"
+    }
+]

@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Suplex",
+        "description": "(uso único) Ataques corpo a corpo causam (máximo de dano - 1) a um inimigo adjacente."
+    },
+    {
+        "name": "Riders of the Storm",
+        "description": "Ao atacar corpor a corpo pode sacrificar 1d6 de 'defesa' para causar 2d6 de dano"
+    },
+    {
+        "name": "Ramble On",
+        "description":  "Pode se mover +10 pés"
+    },
+    {
+        "name": "Light My Fire",
+        "description": "Adiciona o modificador de dano (máx. 3) ao ataque"
+    },
+    {
+        "name": "Ace of Spades",
+        "description": "(uso único) Pode rolar um dado novamente"
+    },
+    {
+        "name": "Hagakure",
+        "description": "Ao cair, causa sua vida e aura máxima em dano a todos os inimigos que te atacaram nesse turno."
+    },
+    {
+        "name": "Medic",
+        "description": "(uso único) Adicione 1d6 à sua próxima cura ou habilidade de cura"
+    },
+    {
+        "name": "Berserk",
+        "description": "(uso único) Ganhe uma ação extra esse turno, perca uma ação no seguinte turno"
+    },
+    {
+        "name": "Symphony of the Light",
+        "description": "Seus ataques em stealth causam +2 de dano"
+    },
+    {
+        "name": "Midas Touch",
+        "description": "Matar inimigos lucra +1d6 de ouro"
+    },
+    {
+        "name": "Death",
+        "description": "Você acumula pontos de morte por assistência (+1) e dano fatal (+2), eles podem ser consumidos para curar si mesmo (metade das almas e uma vez por turno) ou causar dano à um inimigo"
+    },
+    {
+        "name": "The Copycat",
+        "description": "(uso único) Permite copiar a habilidade de um aliado, utilizando os mesmos valores que ele."
+    },
+    {
+        "name": "The Crown",
+        "description": "Aumenta seu tamanho em 5 pés e suas habilidades em área 10 pés."
+    }
+]
