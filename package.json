@@ -13,7 +13,8 @@
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.10.12",
     "dominant-color": "0.0.1",
-    "next": "latest"
+    "next": "latest",
+    "react": "18.2.0"
   },
   "browser": {
     "child_process": false
