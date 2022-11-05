@@ -2,6 +2,7 @@
   pkgs.mkShell {
     nativeBuildInputs = with pkgs; [ 
       nodejs
+      yarn
       pandoc
       parallel
       gnused
