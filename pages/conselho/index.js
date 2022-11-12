@@ -144,7 +144,7 @@ export default function Page(props) {
         // Update selected charactes endurance depending on shield
         selectedCharacter.endurance = selectedCharacter.endurance + shield;
         // Update selected charactes perception depending on amulet
-        selectedCharacter.perception = selectedCharacter.perception + amulet;
+        selectedCharacter.perception = selectedCharacter.endurance + amulet;
         selectedCharacter.discipline = selectedCharacter.discipline + amulet;
     }, [money]);
 
